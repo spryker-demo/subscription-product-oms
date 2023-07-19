@@ -8,11 +8,17 @@
     <process name="Subscription">
 
         <states>
+            <state name="is subscription"/>
             <state name="subscription active"/>
             <state name="subscription cancelled"/>
         </states>
 
         <transitions>
+            <transition>
+                <source>is subscription</source>
+                <target>subscription active</target>
+                <event>check-is-subscription</event>
+            </transition>
             <transition>
                 <source>subscription active</source>
                 <target>subscription cancelled</target>
@@ -31,7 +37,7 @@
         </transitions>
 
         <events>
-            <event name="check-is-subscription" onEnter="true"/>
+            <event name="check-is-subscription" manual="true"/>
             <event name="trigger-subscription-cancellation" manual="true" command="Subscription/SendCanceledSubscriptionNotification"/>
             <event name="execute-recurring-payment" onEnter="true"/>
             <event name="check-subscription-invoice-interval-reached" manual="true" timeout="1 day"/>
