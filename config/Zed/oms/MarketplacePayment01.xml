@@ -71,11 +71,12 @@
 
             <transition happy="true" condition="Subscription/IsSubscription">
                 <source>sent to merchant</source>
-                <target>is subscription</target>
+                <target>subscription checked</target>
+                <event>check-product-subscription</event>
             </transition>
 
             <transition>
-                <source>is subscription</source>
+                <source>subscription checked</source>
                 <target>canceled</target>
                 <event>cancel</event>
             </transition>
