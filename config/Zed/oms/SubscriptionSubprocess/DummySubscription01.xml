@@ -19,7 +19,7 @@
                 <event>trigger-subscription-cancellation</event>
             </transition>
 
-            <transition happy="true" condition="Subscription/isSubscriptionInvoiceIntervalReached">
+            <transition condition="Subscription/isSubscriptionInvoiceIntervalReached">
                 <source>subscription active</source>
                 <target>new</target>
                 <event>check-subscription-invoice-interval-reached</event>
