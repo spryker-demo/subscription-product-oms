@@ -47,7 +47,7 @@
             </transition>
 
             <transition>
-                <source>sent to merchant</source>
+                <source>ready for shipment by merchant</source>
                 <target>canceled</target>
                 <event>cancel</event>
             </transition>
