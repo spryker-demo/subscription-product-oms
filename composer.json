@@ -4,7 +4,7 @@
     "description": "Subscription product OMS module",
     "license": "proprietary",
     "require": {
-        "php": ">=8.0",
+        "php": ">=8.2",
         "spryker/kernel": "^3.70.0",
         "spryker/oms": "^11.22.1",
         "spryker/product": "^6.29.1",
